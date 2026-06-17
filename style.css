@@ -343,7 +343,7 @@ main {
   text-transform: uppercase;
   margin-bottom: 0.4rem;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 0.45rem;
 }
 
@@ -367,8 +367,10 @@ main {
 .java-cup {
   flex-shrink: 0;
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  width: 19px;
+  height: 19px;
+  align-self: flex-end;
+  transform: translateY(-1px);
   -webkit-mask-image: url('assets/java-logo.png');
   mask-image: url('assets/java-logo.png');
   -webkit-mask-size: contain;
@@ -388,6 +390,7 @@ main {
   );
   background-size: 200% auto;
   animation: shimmer 4s linear infinite;
+  filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.4));
 }
 
 @keyframes pond-drift {
