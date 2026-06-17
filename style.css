@@ -686,11 +686,14 @@ h1:hover::before {
 }
 
 .tag:nth-child(1) { animation-delay: 0.7s; }
-.tag:nth-child(2) { animation-delay: 0.78s; }
-.tag:nth-child(3) { animation-delay: 0.86s; }
-.tag:nth-child(4) { animation-delay: 0.94s; }
-.tag:nth-child(5) { animation-delay: 1.02s; }
-.tag:nth-child(6) { animation-delay: 1.10s; }
+.tag:nth-child(2) { animation-delay: 0.76s; }
+.tag:nth-child(3) { animation-delay: 0.82s; }
+.tag:nth-child(4) { animation-delay: 0.88s; }
+.tag:nth-child(5) { animation-delay: 0.94s; }
+.tag:nth-child(6) { animation-delay: 1.00s; }
+.tag:nth-child(7) { animation-delay: 1.06s; }
+.tag:nth-child(8) { animation-delay: 1.12s; }
+.tag:nth-child(9) { animation-delay: 1.18s; }
 
 /* ─── Cursor Trail ───────────────────────────────────────────── */
 .cursor-drop {
