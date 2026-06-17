@@ -363,18 +363,31 @@ main {
   animation: shimmer 4s linear infinite;
 }
 
-/* Кофейная чашка Java — переливается теми же цветами, что и текст */
+/* Логотип Java (PNG как маска) — переливается тем же градиентом, что и текст */
 .java-cup {
   flex-shrink: 0;
-  animation: java-cup-shimmer 4s linear infinite;
-}
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  -webkit-mask-image: url('assets/java-logo.png');
+  mask-image: url('assets/java-logo.png');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
 
-@keyframes java-cup-shimmer {
-  0%   { stroke: #7ba7bc; }
-  25%  { stroke: #b8a9d4; }
-  50%  { stroke: #e8a0b8; }
-  75%  { stroke: #b8a9d4; }
-  100% { stroke: #7ba7bc; }
+  background: linear-gradient(
+    90deg,
+    #7ba7bc 0%,
+    #b8a9d4 25%,
+    #e8a0b8 50%,
+    #b8a9d4 75%,
+    #7ba7bc 100%
+  );
+  background-size: 200% auto;
+  animation: shimmer 4s linear infinite;
 }
 
 @keyframes pond-drift {
