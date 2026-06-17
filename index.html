@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Даниил Ярута — Java Backend Developer</title>
+  <meta name="description" content="Даниил Ярута — Java Backend Developer. Spring Boot, REST API, JPA/Hibernate, PostgreSQL, Maven, Docker. Пет-проекты на GitHub, интерес к финтех- и enterprise-системам.">
+  <meta name="author" content="Даниил Ярута">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icon.jpg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://danielyaruta.github.io/Portfolio/">
+  <meta property="og:title" content="Даниил Ярута — Java Backend Developer">
+  <meta property="og:description" content="Backend на Spring Boot: REST API, JPA/Hibernate поверх PostgreSQL, Maven, Docker. Пет-проекты на GitHub.">
+  <meta property="og:image" content="https://danielyaruta.github.io/Portfolio/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ru_RU">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Даниил Ярута — Java Backend Developer">
+  <meta name="twitter:description" content="Backend на Spring Boot: REST API, JPA/Hibernate поверх PostgreSQL, Maven, Docker.">
+  <meta name="twitter:image" content="https://danielyaruta.github.io/Portfolio/assets/og-image.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Анти-flash: тему применяем ДО рендера. Этот крошечный скрипт
+       намеренно оставлен инлайн — внешний файл сюда нельзя, иначе тёмная
+       тема мигнёт светлой на долю секунды при загрузке. -->
+  <script>
+    (function () {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <!-- Весь интерактив вынесен в отдельный файл -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+    <span class="theme-icon">🌸</span>
+  </button>
+
+  <div class="canvas">
+
+    <div class="water-surface" aria-hidden="true">
+      <div class="ripple r1"></div>
+      <div class="ripple r2"></div>
+      <div class="ripple r3"></div>
+    </div>
+
+    <main>
+      <div class="flower-frame" id="flowerFrame">
+        <canvas class="flowers-canvas" id="flowersCanvas"></canvas>
+      <section class="about-me">
+
+        <div class="photo-frame" id="photoFrame">
+          <img
+            src="assets/icon.jpg"
+            alt="Фото профиля Даниила Яруты"
+            class="profile-photo"
+            id="profilePhoto"
+          >
+          <div class="photo-glow" aria-hidden="true"></div>
+        </div>
+
+        <article class="description">
+
+          <p class="eyebrow">
+            <span class="eyebrow-text">Java Backend Developer</span>
+            <svg class="java-cup" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 11h11v4a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4v-4z"/>
+              <path d="M16 12h2a2 2 0 0 1 0 4h-2"/>
+              <path d="M8 8c0-1 1-1.5 1-2.5S8 4 8 3"/>
+              <path d="M11.5 8c0-1 1-1.5 1-2.5s-1-1.5-1-2.5"/>
+            </svg>
+          </p>
+          <h1>Даниил Ярута</h1>
+          <p class="location">Россия</p>
+
+          <p class="bio">
+            Java выбрал за синтаксис — что поделать, эстет. Сейчас пишу backend на
+            Spring Boot: REST API, слои service/repository, JPA/Hibernate поверх
+            PostgreSQL, миграции, обработка исключений через
+            <code>@ControllerAdvice</code>. Собираю проекты на Maven, версионирую в Git,
+            упаковываю в Docker.
+          </p>
+
+          <p class="bio">
+            Веду пет-проекты на GitHub, чтобы держать руку на пульсе между курсами и
+            рабочими задачами — от консольных утилит до отработки ООП и обработки
+            исключений на практике. Интересна логика финтех- и enterprise-систем: где
+            код читается как контракт, а не как набор догадок о том, что он делает.
+          </p>
+
+          <div class="tech-stack">
+            <span class="tag">Java</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Maven</span>
+            <span class="tag">Git</span>
+          </div>
+
+          <ul class="social-links">
+            <li>
+              <a href="https://github.com/DanielYaruta" target="_blank" rel="noopener noreferrer" class="link-btn link-btn--github">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a href="https://novoshakhtinsk.hh.ru/resume/e6fb163dff10a8ac1d0039ed1f59375a6e684f" target="_blank" rel="noopener noreferrer" class="link-btn link-btn--hh">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" style="flex-shrink:0;border-radius:4px">
+                  <rect width="18" height="18" rx="4" class="hh-bg"/>
+                  <text x="9" y="13" font-family="Arial, sans-serif" font-weight="900" font-size="11" class="hh-text" text-anchor="middle">hh</text>
+                </svg>
+                HeadHunter
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/danielyaruta/" target="_blank" rel="noopener noreferrer" class="link-btn link-btn--linkedin">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+
+        </article>
+      </section>
+      </div><!-- /flower-frame -->
+    </main>
+
+  </div>
+
+</body>
+</html>
